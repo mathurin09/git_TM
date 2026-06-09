@@ -1,8 +1,8 @@
 import http from 'k6/http'
 
 export const options = {
-    vus : 10, 
-    duration: '30s',
+    vus : 1000, 
+    duration: '45s',
 }; 
 export default function() {
     http.get('http://servercrash.example.com')

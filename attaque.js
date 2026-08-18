@@ -1,10 +1,19 @@
 import http from 'k6/http'
 
 export const options = {
-    vus : 100, 
-    duration: '30s',
-}; 
-export default function() {
-    http.get('http://servercrash.example.com')
+        scenarios: {
+            load: {
+                executor: 'constant-arrival-rate',
+                rate : 15000,
+                timeUnit: '1s',
+                duration: '1m',
+
+                preAllocatedVUs: 10,
+                maxVUs: 1000000
+            },
+        },
 };
 
+export default function () {
+    http.get('http://servercrash.example.com');
+}

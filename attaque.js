@@ -9,7 +9,7 @@ export const options = {
                 duration: '1m',
 
                 preAllocatedVUs: 10,
-                maxVUs: 1000000
+                maxVUs: 5000
             },
         },
 };

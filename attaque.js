@@ -11,9 +11,9 @@ export const options = {
                 preAllocatedVUs: 10,
                 maxVUs: 5000
             },
-        },
+        },  
 };
 
 export default function () {
-    http.get('http://servercrash.example.com');
+    http.get('http://192.168.1.229/');
 }
